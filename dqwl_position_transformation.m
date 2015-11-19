@@ -1,16 +1,17 @@
-%DQWL_POSTRANS  Calculates the position transformation.
+%DQWL_POSITION_TRANSFORMATION  Calculates the position transformation of a 
+%                              discrete-time quantum walk on a line.
 %
-%   DQWL_POSTRANS(n) Calculates the position transformation of n-steps 
-%                    discrete quantum walk on a line.
+%   DQWL_POSITION_TRANSFORMATION(n) Calculates the position transformation 
+%                    of a discrete-time quantum walk on a line.
 %       n:           the number of steps of the quantum walk.
 %       return:      a 2d * 2d matrix representing the position 
-%                    transformation matrix of quantum walk system, where 
+%                    transformation matrix of the quantum walk, where 
 %                    d = 2 * n + 1 is the dimension of the position state.
 
-%   Copyright 2013, Haixing Hu.
+%   Copyright 2013-2015, Haixing Hu.
 %   Department of Computer Science & Technology, Nanjing University, China.
 
-function M_p = dqwl_postrans(n)
+function M_p = dqwl_position_transformation(n)
     c_0 = qubit(0);                         % the coin state |0>
     c_1 = qubit(1);                         % the coin state |1>
     d = 2 * n + 1;                          % the dimension of position state

@@ -19,6 +19,13 @@ for m=1:41
         k1(m,n)=cc(m,n);
     end
 end
+
+if isequal(k1*k1', eye(size(k1, 1))) 
+    disp('INFO: The transformation matrix is unitary.');
+else 
+    error('ERROR: The transformation matrix is not unitary.');        
+end  
+
 d1=expm(-i*z0*k1);                                                         % ±‰ªªæÿ’Û
 
 for m=1:1:41
@@ -36,7 +43,7 @@ for mm=1:length(x);
 end
 
 for ii=1:length(z)
-    d1=expm(-i*z(ii)*k1);
+    d1=expm(-i*z(ii)*k1);    
     for mm=1:length(x)
         e3(ii,mm)=abs(d1(ceil(mm/20),20)*mode(mm))^2;
     end
