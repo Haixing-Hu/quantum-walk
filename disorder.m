@@ -12,11 +12,10 @@
 %   School of Physics,
 %   Nanjing University, China.
 
-function R = disorder(H, d)   
+function R = disorder(H, d)
+    check_unitary(H);
+    disp('INFO: Introducing the random errors to the matrix ...');
     n = size(H, 1);
-    if n ~= size(H,2) 
-        error('ERROR: the Hamiltonian must be a square matrix.');
-    end
     R = zeros(n, n);
     for i = 1 : n        
         for j = i : n
