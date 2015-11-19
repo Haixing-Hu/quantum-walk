@@ -16,10 +16,10 @@ function check_unitary(M)
         error('ERROR: The number of rows and columns of the matrix are not equal.'); 
     else
         A = M' * M;
-        if A ~= eye(d(1))
-            error('ERROR: The matrix is not unitary.');
-        else
-            disp('INFO: The matrix is unitary.');
+        if isequal(A, eye(d(1)))    
+            disp('INFO: The transformation matrix is unitary.');
+        else 
+            error('ERROR: The transformation matrix is not unitary.');        
         end        
     end
 end
