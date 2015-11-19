@@ -1,8 +1,8 @@
 %DQWL3_POSITION_TRANSFORMATION  Calculates the position transformation of a 
-%                              three-states discrete-time quantum walk on a line.
+%                               3-states discrete-time quantum walk on a line.
 %
 %   DQWL3_POSITION_TRANSFORMATION(n) Calculates the position transformation 
-%                    of a three-states discrete-time quantum walk on a line.
+%                    of a 3-states discrete-time quantum walk on a line.
 %       n:           the number of steps of the quantum walk.
 %       return:      a 3d * 3d matrix representing the position 
 %                    transformation matrix of the quantum walk, where 

@@ -1,16 +1,17 @@
-%DQWL3_MEASURE  Measure the position state of a three states discrete-time 
+%DQWL3_MEASURE  Measure the position state of a 3-states discrete-time 
 %               quantum walk on a line.
 %
-%   DQWL3_MEASURE(s, n) Measure the position state of a n-steps discrete-time 
-%                      quantum walk on a line.
+%   DQWL3_MEASURE(s, n) Measure the position state of a 3-states discrete-time 
+%                       quantum walk on a line.
 %       s:             the whole state of the quantum walk system, which is
 %                      a 3*(2*n+1)-dimesional vector.
 %       n:             the number of steps of the quantum walk.
 %       return:        a (2*n+1)-dimensional vector representing the 
 %                      probability vector of the position.
 
-%   Copyright 2013, Haixing Hu.
+%   Copyright 2015, Haixing Hu.
 %   Department of Computer Science & Technology, Nanjing University, China.
+
 function r = dqwl3_measure(s, n)
     d = 2 * n + 1;
     r = zeros(d, 1);
