@@ -1,6 +1,6 @@
-%DQWL Simulate the discrete-time quantum on a line.
+%DQWL4 Simulate the 4-states discrete-time quantum on a line.
 %
-%   DQWL(n [,s_c]) Simulate the discrete-time quantum on a line.
+%   DQWL4(n [,s_c]) Simulate the 4-states discrete-time quantum on a line.
 %       n:      the number of steps of the quantum walk.
 %       s_c:    (optional) the initial state of the direction coin.
 %       return: a (2*n+1)-dimension vector representing the probability at 
@@ -9,10 +9,10 @@
 %   Copyright 2013, Haixing Hu.
 %   Department of Computer Science & Technology, Nanjing University, China.
 
-function s_p = dqwl(n, varargin)                  
-    d = 2 * n + 1;                          % the dimension of position states    
-    M_c = dqwl_coin_transformation(n);         % the coin transformation 
-    M_p = dqwl_position_transformation(n);  % the position transformation
+function s_p = dqwl4(n, varargin)                  
+    d = 4 * n + 1;                          % the dimension of position states    
+    M_c = dqwl4_coin_transformation(n);     % the coin transformation 
+    M_p = dqwl4_position_transformation(n); % the position transformation
     M   = M_p * M_c;                        % the whole transformation
     
 %     disp('INFO: Checking the unitary of position transformatin ...');
@@ -35,5 +35,5 @@ function s_p = dqwl(n, varargin)
     for k = 1 : n
         s = M * s;
     end
-    s_p = dqwl_measure(s, n);               % measure the position state
+    s_p = dqwl4_measure(s, n);               % measure the position state
 end    

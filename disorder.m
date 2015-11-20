@@ -13,7 +13,7 @@
 %   Nanjing University, China.
 
 function R = disorder(H, d)
-    check_unitary(H);
+    %check_unitary(H);
     disp('INFO: Introducing the random errors to the matrix ...');
     n = size(H, 1);
     R = zeros(n, n);

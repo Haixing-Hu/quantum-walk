@@ -10,14 +10,6 @@
 
 function plot_eigenvalue(M)
     e = eig(M);
-    e = abs(e);
-    x = unique(e);
-    y = hist(e, x);
-%     disp('sizeof(e) = '); disp(size(e,1));
-%     disp('e = '); disp(sort(e));
-%     disp('sizeof(x) = '); disp(size(x,1));
-%     disp('x = '); disp(x);
-%     disp('sizeof(y) = '); disp(size(y,2));
-%     disp('y = '); disp(y);
-    plot(x, y);
+    y = histcounts(e);    
+    hist(y);
 end

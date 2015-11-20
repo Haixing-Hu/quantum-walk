@@ -28,7 +28,12 @@ function s_p = tsdqwl(n, varargin)
     s_p = basis(d, n+1);                    % set the initial position state s_p
     s   = kron(s_p, s_c);                   % set the whole state s
 
-    check_unitary(M);                       % check the unitary of the transformation matrix
+    %check_unitary(M);                       % check the unitary of the transformation matrix
+    
+%     disp('size(s_p)=');disp(size(s_p));
+%     disp('size(s_c)=');disp(size(s_c));
+%     disp('size(M)=');disp(size(M));
+%     disp('size(s)=');disp(size(s));
     
     for k = 1 : n
         s = M * s;
