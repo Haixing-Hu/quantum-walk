@@ -1,7 +1,7 @@
 %FERMINOIC_MEASURE  Measure the position state of a discrete-time quantum walk
 %              on a line.
 %
-%   DQWL_MEASURE(s1, s2) Calculate the ferminoic state of two dependent 
+%   FERMINOIC_MEASURE(s1, s2) Calculate the ferminoic state of two dependent 
 %                       state.
 %       s1:            the first state, which is a m-dimensional vector.
 %       s2:            the second state, which is a m-dimensional vector.
