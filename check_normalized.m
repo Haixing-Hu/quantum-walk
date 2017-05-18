@@ -10,9 +10,9 @@
 %   Department of Computer Science & Technology, Nanjing University, China.
 function check_normalized(v)
     disp('INFO: Checking the vector is normalized or not ...');
-    if norm(d) ~= 1
-        error('ERROR: the vector is not normalized.');
+    if isequalfp(norm(v), 1)
+        disp('INFO: OK. The vector is normalized.'); 
     else
-        disp('INFO: the vector is normalized.');        
+        error('ERROR: The vector is not normalized.');         
     end
 end

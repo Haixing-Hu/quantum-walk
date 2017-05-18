@@ -17,8 +17,9 @@ function check_unitary(M)
     else
         A = M * M';
         disp('A=');disp(A);
-        disp('eye(d(1))=');disp(eye(d(1)));
-        if isequal(A, eye(d(1)))    
+        I = eye(d(1));
+        disp('I=');disp(I);
+        if isequalfp(A, I)    
             disp('INFO: O.K. The transformation matrix is unitary.');
         else 
             error('ERROR: The transformation matrix is not unitary.');        
