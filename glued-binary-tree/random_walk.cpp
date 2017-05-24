@@ -18,7 +18,7 @@ size_t random_walk(Generator& engine, Graph const& g, size_t source, size_t dest
 {
   size_t steps = 0;
   size_t current = source;
-  while (current != source) {
+  while (current != dest) {
     size_t next = random_choose(engine, g[current].getNeighbours());
     assert(next != current);
     ++steps;
