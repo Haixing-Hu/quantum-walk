@@ -1,13 +1,13 @@
 %FERMINOIC_MEASURE  Measure the position state of a discrete-time quantum walk
 %              on a line.
 %
-%   FERMINOIC_MEASURE(s1, s2) Calculate the ferminoic state of two dependent 
+%   FERMINOIC_MEASURE(s1, s2) Calculate the ferminoic state of two dependent
 %                       state.
 %       s1:            the first state, which is a m-dimensional vector.
 %       s2:            the second state, which is a m-dimensional vector.
-%       return:        a 2m-dimensional vector representing the ferminoic 
+%       return:        a 2m-dimensional vector representing the ferminoic
 %                      state of the two particles.
-%   Copyright 2017, Haixing Hu. 
+%   Copyright 2017, Haixing Hu.
 %   School of Physics,
 %   Nanjing University, China.
 function r = ferminoic_state(s1, s2)
@@ -23,4 +23,4 @@ function r = ferminoic_state(s1, s2)
             r(x,y) = 1/sqrt(2) * (s1(x)*s2(y) - s1(y) * s2(x));
         end
     end
-end    
+end

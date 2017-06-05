@@ -4,6 +4,7 @@
 %       n:          The degree of the glued tree.
 %       random:     Indicate whether to randomize the connections between 
 %                   two connected binary trees.
+%       k:          The jumpping rate, default value is 1.
 %       return:     The Halmiltonian of the specified glued tree. The nodes 
 %                   of the glued tree are numbered sequentially from left 
 %                   to right, and from top to bottom. Note that if the
@@ -13,8 +14,8 @@
 %   Copyright 2017, Haixing Hu.
 %   School of Physics, Nanjing University, China.
 
-function H = glued_tree_halmiltonian(n, random)
+function H = glued_tree_halmiltonian(n, random, k)    
     A = glued_tree_adjacency(n, random);
     D = glued_tree_degree(n, random);
-    H = D - A;
+    H = (D - A) * k;
 end
