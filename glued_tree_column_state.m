@@ -3,7 +3,6 @@
 %
 %  GLUED_TREE_COLUMN_STATE(w, n, random, S) Calculate the column state of 
 %          the evolution of acontinue-time quantum walk on a glued tree.
-%        w:          The number of dependent walkers.
 %        n:          The rank of the glued tree.
 %        random:     Indicate whether to randomize the connections between 
 %                    two connected binary trees.
@@ -13,7 +12,7 @@
 %   Copyright 2017, Haixing Hu.
 %   School of Physics, Nanjing University, China.
 
-function c = glued_tree_column_state(w, n, random, s)
+function c = glued_tree_column_state(n, random, s)
     if random 
         m = 2 * (2.^(n+1) - 1); 
         k = 2 * (n + 1);
